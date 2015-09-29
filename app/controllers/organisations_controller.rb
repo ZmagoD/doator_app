@@ -4,10 +4,13 @@ class OrganisationsController < ApplicationController
     @organisations = Organisation.all
   end
   
+  def show
+    @organisation = Organisation.find(params[:id])
+  end
   
   private
 
-  def user_params
-    params.require( :organisation ).permit( :name )
+  def organisation_params
+    params.require( :organisation ).permit( :name, :address, :zip, :city, :description, :phone, :website )
   end
 end

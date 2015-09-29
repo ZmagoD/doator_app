@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-6 panel">
+    <h1><%= @organisation.name %></h1>
+    <ul class="list-unstyled">
+      <li>Naslov: <%= @organisation.address %></li>
+      <li>Kraj: <%= @organisation.zip %> <%= @organisation.city %></li>
+      <li>Tel: <%= @organisation.phone %></li>
+      <li>Web: <%= @organisation.website %></li>
+    </ul>
+  </div>
+  <div class="col-md-6 panel">
+    <p><%= @organisation.description %></p>
+    <%= link_to "Nazaj", organisations_path %>
+  </div>
+</div>
