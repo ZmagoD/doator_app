@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 well">
+    <%= simple_form_for @organisation do |f| %>
+      <%= f.input :name, label: "Naziv" %> 
+      <%= f.input :address, label: "Naslov" %> 
+      <%= f.input :zip, label: "Poštna št.:" %> 
+      <%= f.input :city, label: "Kraj" %> 
+      <%= f.input :phone, label: "Tel. št.:" %> 
+      <%= f.input :email, label: "Email:" %> 
+      <%= f.input :website, label: "Spletna stran:"%> 
+      <%= f.input :description, label: "Opis organizacije:" %> 
+      <%= f.input :password, label: "Geslo:" %>
+      <%= f.input :password_confirmation, label: "Ponovi geslo:"  %>
+      <%= f.submit "Potrdi", class: "btn btn-default btn-lg" %>
+    <% end %>
+  </div>
+</div>
