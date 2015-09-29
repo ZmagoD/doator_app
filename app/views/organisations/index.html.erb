@@ -1,0 +1,5 @@
+<% @organisations.each do |org| %>
+  <h2 class="organisation-title"><%= link_to org.name, org %></h2>
+  <i><%= org.address %></i>
+  <p><%= org.description %></p>
+<% end %>
