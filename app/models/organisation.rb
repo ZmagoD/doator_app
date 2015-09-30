@@ -13,10 +13,10 @@ class Organisation < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
-                    uniqueness: true
+                    uniqueness: { case_sensitive: false } 
                     
   validates :website, length: { maximum: 255 } 
-  validates :description, length: { minimum: 5 }
+  validates :description, length: { maximum: 600 }
   
   validates :password, presence: true, length: { minimum: 8 } 
   validates :password_confirmation, presence: true, length: { minimum: 8 }       

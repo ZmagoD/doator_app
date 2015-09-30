@@ -20,4 +20,39 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  errors:
+    # The default format to use in full error messages.
+    format: "%{attribute} %{message}"
+
+    # The values :model, :attribute and :value are always available for interpolation
+    # The value :count is available when applicable. Can be used for pluralization.
+    messages:
+      model_invalid: "Napaka v ovirjanju: %{errors}"
+      inclusion: "ni v listi"
+      exclusion: "je rezervirano"
+      invalid: "ni pravilno"
+      confirmation: "ne ustreza %{attribute}"
+      accepted: "mora biti sprejeto"
+      empty: "mora biti izpolnjeno"
+      blank: "mora biti izpolnjeno"
+      present: "mora ostati prazno"
+      too_long:
+        one: "je predolgo (maksimalno 1 znagk)"
+        other: "je predolgo (maksimalno %{count} znakov)"
+      too_short:
+        one: "je prekratko (minimum 1 znak)"
+        other: "je prekratko (minimum %{count} znakov)"
+      wrong_length:
+        one: "napačna dolžina (mora biti 1 znak)"
+        other: "napačna dolžina (mora biti %{count} znakov)"
+      not_a_number: "ni celo število"
+      not_an_integer: "mora biti celo številor"
+      greater_than: "mora biti večje od %{count}"
+      greater_than_or_equal_to: "mora biti večje ali enako od %{count}"
+      equal_to: "mora biti enako kot %{count}"
+      less_than: "mora biti manjše %{count}"
+      less_than_or_equal_to: "mora biti manjše ali enako %{count}"
+      other_than: "mora biti drugo kot %{count}"
+      odd: "mora biti neparno"
+      even: "mora biti parno"
