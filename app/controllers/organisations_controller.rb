@@ -33,7 +33,7 @@ class OrganisationsController < ApplicationController
     params.require( :organisation ).permit( :name, :address, :zip, :city, :description, :phone, :website, :password, :password_confirmation )
   end
   
-   protected
+  protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email) }
