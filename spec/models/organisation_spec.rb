@@ -18,9 +18,4 @@ RSpec.describe Organisation, type: :model do
     expect( org ).to_not be_valid
   end
   
-  it 'should be unique' do
-    org_dup = org
-    expect(org_dup).to_not be_valid
-  end
-  
 end
