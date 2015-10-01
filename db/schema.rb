@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929152207) do
+ActiveRecord::Schema.define(version: 20150930174728) do
+
+  create_table "colectionlocs", force: :cascade do |t|
+    t.integer  "organisation_id"
+    t.string   "type"
+    t.string   "goods"
+    t.text     "description"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "colectionlocs", ["organisation_id"], name: "index_colectionlocs_on_organisation_id"
 
   create_table "organisations", force: :cascade do |t|
     t.string   "name"
