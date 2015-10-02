@@ -7,6 +7,8 @@ Rails.application.routes.draw do
                         registrations: "organisations",
                         sessions: "organisations/sessions"
                         }
-  resources :organisations
+  resources :organisations do
+    resources :colectionloc
+  end
   
 end

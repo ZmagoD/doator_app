@@ -8,6 +8,7 @@ gem 'bootstrap-sass'
 gem 'sass-rails'
 gem 'devise'
 gem 'simple_form'
+gem 'geocoder', '~> 1.2.11'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

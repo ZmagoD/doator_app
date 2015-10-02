@@ -2,7 +2,13 @@ Organisation.create(
   name: "admin",
   email: "admin@admin.com",
   password: "asdf1234",
-  password_confirmation: "asdf1234"
+  password_confirmation: "asdf1234",
+  address: Faker::Address.street_address,
+  zip: Faker::Address.zip,
+  city: Faker::Address.city,
+  phone: Faker::PhoneNumber.phone_number,
+  website: Faker::Internet.domain_name,
+  description: Faker::Lorem.paragraph
   )
 
 15.times { Organisation.create( 

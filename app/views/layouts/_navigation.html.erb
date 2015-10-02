@@ -16,6 +16,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Prijava", new_organisation_session_path %></li>
         <li><%= link_to "Registriraj organizacijo", new_organisation_path %></li>
+        <% if organisation_signed_in? %>
+        <li><%= link_to "Moj Profil", current_organisation %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
