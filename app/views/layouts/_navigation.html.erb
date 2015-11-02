@@ -14,11 +14,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Prijava", new_organisation_session_path %></li>
-        <li><%= link_to "Registriraj organizacijo", new_organisation_path %></li>
         <% if organisation_signed_in? %>
         <li><%= link_to "Moj Profil", current_organisation %></li>
         <li><%= link_to "Odjava", destroy_organisation_session_path, :method => :delete %></li>
+        <% else %>
+        <li><%= link_to "Prijava", new_organisation_session_path %></li>
+        <li><%= link_to "Registriraj organizacijo", new_organisation_path %></li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
