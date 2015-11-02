@@ -10,6 +10,9 @@
   </div>
   <div class="col-md-6 panel">
     <p><%= @organisation.description %></p>
+    
     <%= link_to "Nazaj", organisations_path %>
+    <br>
+    <%= link_to "Dodaj zbirno lokacijo", new_organisation_colectionloc_path( @organisation ) if @organisation == current_organisation %>
   </div>
 </div>

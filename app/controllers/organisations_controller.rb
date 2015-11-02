@@ -1,5 +1,5 @@
 class OrganisationsController < ApplicationController
-  before_action :authenticate_user!, :only => [  :edit, :delete ]
+  before_action :authenticate_organisation!, :only => [  :edit, :delete ]
   before_action :configure_permitted_parameters, if: :devise_controller?
   def index 
     @organisations = Organisation.all
